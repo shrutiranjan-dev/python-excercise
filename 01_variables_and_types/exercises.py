@@ -15,40 +15,55 @@ Instructions:
 # Exercise E1: Create a variable named `city` with the value "Tokyo"
 # and print it.
 # Your code here:
+city = "Tokyo"
+print(city)
 
 # Exercise E2: Create a variable `population` with the value 37_000_000
 # and print it.
 # Your code here:
+population = 37_000_000
+print(population)
 
 # Exercise E3: Create a variable `area_sq_km` with the value 2194.0
 # and print it.
 # Your code here:
+area_sq_km = 2194.0
+print(area_sq_km)
 
 # Exercise E4: Create a variable `is_capital` with the value True
 # and print it.
 # Your code here:
-
+is_capital = True
+print(is_capital)
 # Exercise E5: Use type() to print the type of `population`.
 # Your code here:
 
 # Exercise E6: Create two variables `x` and `y` with values 10 and 20.
 # Print their sum.
 # Your code here:
+x=10
+y=20
+print(f"the sum will be{x+y}")
 
 # Exercise E7: Set `result` to None, then print it.
 # Your code here:
+result = None
+print(result)
 
 # Exercise E8: Create a variable `name` with your name, then print
 # "Hello, <name>!" using string concatenation.
 # Your code here:
-
+name = "Deku"
+print(f"Hello {name}!")
 # Exercise E9: Print the type of 3.14.
 # Your code here:
+print(type(3.14))
 
 # Exercise E10: Create a variable `is_complete` and set it to False.
 # Print it.
 # Your code here:
-
+is_complete = False
+print(is_complete)
 
 # =============================================================================
 # MEDIUM (10 exercises)
