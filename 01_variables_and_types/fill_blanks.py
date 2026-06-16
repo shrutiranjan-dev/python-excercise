@@ -13,23 +13,23 @@ Instructions:
 # =============================================================================
 
 # 1. Assign your name to a variable
-name = _____
+name = "user one"
 print(name)
 
 # 2. Assign your age
-age = _____
+age = 26
 print(age)
 
 # 3. Create a greeting variable
-greeting = "Hello, " + _____
+greeting = "Hello, " + name
 print(greeting)
 
 # 4. Assign a float value
-price = _____
+price = 77.79
 print(price)
 
 # 5. Assign a boolean
-is_learning = _____
+is_learning = True
 print(is_learning)
 
 
@@ -38,24 +38,24 @@ print(is_learning)
 # =============================================================================
 
 # 6. Check the type of 42
-print(type(_____))  # Should be <class 'int'>
+print(type(name))  # Should be <class 'int'>
 
 # 7. Check the type of 3.14
-print(type(_____))  # Should be <class 'float'>
+print(type(price))  # Should be <class 'float'>
 
 # 8. Check the type of True
-print(type(_____))  # Should be <class 'bool'>
+print(type(is_learning))  # Should be <class 'bool'>
 
 # 9. Multiple assignment: set a, b, c to 1, 2, 3
-_____, _____, _____ = 1, 2, 3
+a, b, c = 1, 2, 3
 print(a, b, c)  # 1 2 3
 
 # 10. Assign the same value to x, y, z
-x = y = z = _____
+x = y = z = 69
 print(x, y, z)
 
 # 11. Check the type of None
-print(type(_____))  # <class 'NoneType'>
+print(type(None))  # <class 'NoneType'>
 
 
 # =============================================================================
@@ -64,28 +64,28 @@ print(type(_____))  # <class 'NoneType'>
 
 # 12. Convert string "25" to int
 age_str = "25"
-age = _____(age_str)
+age = int(age_str)
 print(age)  # 25
 
 # 13. Convert int to string
 count = 42
-count_str = _____(count)
+count_str = str(count)
 print(count_str)  # "42"
 
 # 14. Convert string to float
 price_str = "19.99"
-price = _____(price_str)
+price = float(price_str)
 print(price)  # 19.99
 
 # 15. Convert to bool — what's truthy?
-print(bool(1))    # _____
-print(bool(0))    # _____
-print(bool(""))   # _____
-print(bool("x"))  # _____
+print(bool(1))    # true
+print(bool(0))    # false
+print(bool(""))   # false
+print(bool("x"))  # true
 
 # 16. Convert user input (always a string) to int
 user_input = "30"
-user_age = int(_____)
+user_age = int(user_input)
 print(user_age + 5)  # 35
 
 
@@ -94,20 +94,20 @@ print(user_age + 5)  # 35
 # =============================================================================
 
 # 17. Set result to None
-result = _____
+result = None
 print(result)  # None
 
 # 18. Check if result is None (use is, not ==)
-if result _____ None:
+if result is None:
     print("No result yet")
 
 # 19. None is falsy — check its bool value
-print(bool(None))  # _____
+print(bool(None))  # false
 
 # 20. Compare: None vs False
 value = None
-print(value is _____)   # True (None is None)
-print(value == _____)   # False (None != False)
+print(value is value)   # True (None is None)
+print(value != value)   # False (None != False)
 
 
 # =============================================================================
@@ -115,9 +115,9 @@ print(value == _____)   # False (None != False)
 # =============================================================================
 
 # 21. Model configuration constants
-MODEL_NAME = _____  # "gpt-4o"
-MAX_TOKENS = _____  # 4096
-TEMPERATURE = _____  # 0.7
+MODEL_NAME = "gpt-4o"  # "gpt-4o"
+MAX_TOKENS = 4096  # 4096
+TEMPERATURE = 0.7  # 0.7
 print(f"{MODEL_NAME}: max_tokens={MAX_TOKENS}, temp={TEMPERATURE}")
 # gpt-4o: max_tokens=4096, temp=0.7
 
@@ -126,18 +126,18 @@ input_tokens = 1000
 output_tokens = 500
 input_rate = 0.03   # per 1k tokens
 output_rate = 0.06  # per 1k tokens
-cost = (input_tokens / 1000) * input_rate + (output_tokens / 1000) * _____
+cost = (input_tokens / 1000) * input_rate + (output_tokens / 1000) * output_rate
 print(f"Cost: ${cost:.4f}")  # Cost: $0.0600
 
 # 23. Confidence threshold
 confidence = 0.95
 threshold = 0.8
-is_reliable = confidence _____ threshold  # use > or >=
+is_reliable = confidence >= threshold  # use > or >=
 print(is_reliable)  # True
 
 # 24. Type check before processing
 value = "42"
-if type(value) == _____:
+if type(value) == str:
     print("It's a string!")
     num = int(value)
     print(num + 8)  # 50
@@ -145,12 +145,12 @@ if type(value) == _____:
 # 25. Swap two variables
 a = 5
 b = 10
-a, b = _____, _____
+a, b = 10, 5
 print(f"a={a}, b={b}")  # a=10, b=5
 
 # 26. Named constants for API config
 API_KEY = "sk-..."
-API_TIMEOUT = _____  # 30 seconds
+API_TIMEOUT = "30 seconds"  # 30 seconds
 print(f"Timeout: {API_TIMEOUT}s")
 
 
@@ -159,8 +159,8 @@ print(f"Timeout: {API_TIMEOUT}s")
 # =============================================================================
 
 # 27. Type hint a variable
-name: _____ = "Alice"  # fill with the type
-age: _____ = 25        # fill with the type
+name: str = "Alice"  # fill with the type
+age: int = 25        # fill with the type
 print(f"{name} is {age}")
 
 # 28. Dataclass creation
@@ -168,21 +168,21 @@ from dataclasses import dataclass
 
 @dataclass
 class Config:
-    model: _____  # str
-    temperature: _____  # float
-    max_tokens: _____  # int
-    stream: _____  # bool
+    model: str  # str
+    temperature: float  # float
+    max_tokens: int  # int
+    stream: bool  # bool
 
 cfg = Config("gpt-4", 0.7, 2048, False)
 print(cfg.model)  # gpt-4
 
 # 29. Multiple assignment unpacking
 data = ["Alice", 25, 5.6]
-name, age, height = _____
+name, age, height = data
 print(f"{name} is {age}, height {height}")
 
 # 30. Underscore for throwaway values
-first, _____, last = [1, 2, 3]
+first, _, last = [1, 2, 3]
 print(first, last)  # 1 3
 
 
