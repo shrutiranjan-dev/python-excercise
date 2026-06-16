@@ -72,46 +72,68 @@ print(is_complete)
 # Exercise M1: Convert the string "123" to an integer, multiply by 2,
 # and print the result (should be 246).
 # Your code here:
+number = int("123")
+print(f"answer will be {number * 2}")
 
 # Exercise M2: Ask the user for their age using input(), convert to int,
 # and print how old they'll be in 10 years.
 # Your code here:
+user_age = int(input("enter your age : "))
+print(f"in 10 years you'll be {user_age+10}")
 
 # Exercise M3: Use multiple assignment to set `a`, `b`, `c` to 5, 10, 15.
 # Print them all on one line.
 # Your code here:
+a,b,c = 5,10,15
+print(a,b,c)
 
 # Exercise M4: Swap the values of `first` and `second` (currently 100 and 200)
 # so that first becomes 200 and second becomes 100. Print both.
 first = 100
 second = 200
 # Your code here:
+first, second = second,first
+print(first, second)
 
 # Exercise M5: Convert the float 3.99 to a string and concatenate it with
 # "Price: $" to produce "Price: $3.99". Print the result.
 # Your code here:
+price = str(3.99)
+print("Price: $" + price)
 
 # Exercise M6: Check if the value None is truthy or falsy. Print the result
 # of bool(None).
 # Your code here:
+print(bool(None))
+
 
 # Exercise M7: Create a constant MAX_USERS = 1000. Then create a variable
 # current_users = 750. Print both.
 # Your code here:
+MAX_USERS = 1000
+current_users = 750
+print(MAX_USERS, current_users)
 
 # Exercise M8: Use type() to check the type of the value "3.14" (a string).
 # Then convert it to float and print the type again.
 # Your code here:
+string_value = "3.14"
+print(type(string_value))
+print(type(float(string_value)))
 
 # Exercise M9: Given `val = "0"`, convert it to bool and explain (in a comment)
 # why the result is what it is.
 val = "0"
 # Your code here:
+print(bool(val))  # True
 
 # Exercise M10: Set width = 1920 and height = 1080. Use multiple assignment
 # to swap them in one line. Print width and height after the swap.
 # Your code here:
-
+width = 1920
+height = 1080
+width, height = height, width
+print(width, height)
 
 # =============================================================================
 # HARD (10 exercises)
