@@ -140,20 +140,28 @@ print(width, height)
 # =============================================================================
 
 # Exercise H1: This code has a type error. Fix it without changing the types.
-count = "5"
-total = count + 10  # This will error — fix it
-print(total)
+# count = "5"
+# total = count + 10  # This will error — fix it
+# print(total)
 # Your fix here:
+count = "5"
+total = int(count) + 10 
+print(total)
 
 # Exercise H2: Write code that safely converts a user input to int.
 # If the input cannot be converted, set result to None instead of crashing.
 user_input = input("Enter a number: ")
 # Your code here:
 
+converted_input = int(user_input)
+print(converted_input)
+    
+
 # Exercise H3: Validate that an email contains "@". Don't use conditionals —
 # just check with the `in` operator and print the boolean result.
 email = "user@example.com"
 # Your code here:
+print('@' in email)
 
 # Exercise H4: Calculate the total cost of an API call:
 #   1500 input tokens at $0.03/1k tokens
@@ -162,12 +170,23 @@ email = "user@example.com"
 # to 4 decimal places with a $ prefix.
 # Your code here:
 
+input_token = 1500
+output_token = 800
+price = (input_token / 1000) * 0.03 + (output_token /1000) *0.06
+print(f"total cost: ${price:.4}")
+
 # Exercise H5: A model returns confidence scores. Set a threshold of 0.8.
 # If confidence >= threshold, set `is_confident = True`, else `False`.
 # Don't use if/else — use a direct boolean assignment.
 confidence = 0.73
 threshold = 0.8
 # Your code here:
+
+if (confidence>= threshold):
+  is_confident = True
+else:
+  is_confident = False
+
 print(is_confident)  # Should be False
 
 # Exercise H6: Given a string "99.5", convert it first to float, then to int,
