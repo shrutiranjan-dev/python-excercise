@@ -193,20 +193,33 @@ print(is_confident)  # Should be False
 # and explain (in a comment) what happens to the decimal part.
 value_str = "99.5"
 # Your code here:
-
+print(int(float(value_str)))
 # Exercise H7: Create a config dictionary (not a dataclass yet) with
 # model_name, temperature, and max_tokens. Access and print each value.
 # Your code here:
+
+config_dictionary = {"model_name":"gpt-5.5", "temperature": 0.5, "max_tokens": 1233333333, "Access": True}
+print(config_dictionary["model_name"])
+print(config_dictionary["temperature"])
+print(config_dictionary["max_tokens"])
+print(config_dictionary["Access"])
+
 
 # Exercise H8: Write a one-liner that creates variables name, age, city
 # from the list ["Alice", 30, "London"] using unpacking. Print all three.
 data = ["Alice", 30, "London"]
 # Your code here:
+name, age, city = data
+print(name, age, city)
 
 # Exercise H9: Given `value = "42"`, verify it's a string. If it is,
 # convert it to int and add 8 (result: 50). Use type() to check.
 value = "42"
 # Your code here:
+if type(value) == str:
+  print(int(value) +8)
+else:  print("value is not a string")
+
 
 # Exercise H10: Create variables with type hints for:
 #   - model_name: str = "claude-3"
@@ -215,7 +228,12 @@ value = "42"
 #   - use_vision: bool = True
 # Print all four.
 # Your code here:
+model_name: str = "claude-3"
+max_tokens: int = 4096
+temperature: float = 0.5
+use_vision: bool = True
 
+print(f"the model name is {model_name}, max token limit is {max_tokens}, temperature is {temperature}, use vision is {use_vision}")
 
 # =============================================================================
 # EXPERT (5 exercises)
@@ -227,6 +245,9 @@ value = "42"
 #   ssl: bool
 # Create an instance and print it.
 # Your code here:
+
+
+
 
 # Exercise X2: Calculate the memory estimate for storing a list of
 # 1_000_000 float values. Assume each float takes 24 bytes.
