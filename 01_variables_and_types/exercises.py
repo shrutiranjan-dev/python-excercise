@@ -245,8 +245,15 @@ print(f"the model name is {model_name}, max token limit is {max_tokens}, tempera
 #   ssl: bool
 # Create an instance and print it.
 # Your code here:
+from dataclasses import dataclass
 
+@dataclass
+class ServerConfig:
+  host:str
+  port:int
+  ssl:bool
 
+print(ServerConfig("localhost", 8080, True))
 
 
 # Exercise X2: Calculate the memory estimate for storing a list of
@@ -254,6 +261,7 @@ print(f"the model name is {model_name}, max token limit is {max_tokens}, tempera
 # Store the result in a variable `memory_bytes`, then convert to MB.
 # Print the result.
 # Your code here:
+
 
 # Exercise X3: Create a simple type validator function (not a decorator)
 # that takes a value and an expected type, returns True if type matches,
